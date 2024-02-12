@@ -1,0 +1,11 @@
+<ul>
+    <li *ngFor="let show of tvShows">{{show.title}}</li>
+</ul>
+<div class="cardContainer">
+    <div *ngFor="let show of tvShows" class="card">
+        <img [src]="show.image" alt="">
+        <div class="title">{{show.title}}</div>
+        <div>Episodios: {{show.episodes}}</div>
+        <div *ngIf="show.year >= 2000">Año: {{show.year}}</div>
+    </div>
+</div>
