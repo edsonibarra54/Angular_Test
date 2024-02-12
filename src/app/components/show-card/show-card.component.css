@@ -1,0 +1,22 @@
+img {
+    height: 300px;
+    width: 220px;
+}
+
+.card{
+    max-width: 250px;
+    height: 370px;
+    margin: 10px;
+    padding: 15px;
+    border-radius:5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    max-width: 220px;
+    display: flex;
+    
+}
