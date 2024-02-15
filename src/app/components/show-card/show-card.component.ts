@@ -1,11 +1,11 @@
-import { NgFor, NgIf } from '@angular/common';
+import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { Show } from '../../interfaces/show.interface';
 
 @Component({
   selector: 'app-show-card',
   standalone: true,
-  imports: [NgFor, NgIf],
+  imports: [NgFor, NgIf, NgClass],
   templateUrl: './show-card.component.html',
   styleUrl: './show-card.component.css'
 })
@@ -18,4 +18,10 @@ export class ShowCardComponent {
     title: "",
     year: 0,
   };
+
+  public selected: boolean = false;
+
+  public onSelect(): void{
+    this.selected = !this.selected;
+  } 
 }
