@@ -19,9 +19,9 @@ export class ShowCardComponent {
     year: 0,
   };
 
-  public selected: boolean = false;
+  //public selected: boolean = false;
 
   public onSelect(): void{
-    this.selected = !this.selected;
+    this.tvShow.isSelected = !this.tvShow.isSelected
   } 
 }

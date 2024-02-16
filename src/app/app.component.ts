@@ -8,11 +8,12 @@ import { FooterComponent } from './footer/footer.component';
 import { ShowsListComponent } from './components/shows-list/shows-list.component';
 import { Show } from './interfaces/show.interface';
 import { ShowCardComponent } from './components/show-card/show-card.component';
+import { ControlsComponent } from './components/controls/controls.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ContadorComponent, ImagenComponent, HeaderComponent, ContentComponent, FooterComponent, ShowsListComponent, ShowCardComponent],
+  imports: [RouterOutlet, ContadorComponent, ImagenComponent, HeaderComponent, ContentComponent, FooterComponent, ShowsListComponent, ShowCardComponent, ControlsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -77,5 +78,11 @@ export class AppComponent {
     "episodes": 225,
     "image": "https://m.media-amazon.com/images/M/MV5BMDM0MDA3NzYtMDE1MS00YjZmLWJmNjQtNzgxYzlhMmMyZjQ2XkEyXkFqcGdeQXVyNjk1Njg5NTA@._V1_SY1000_CR0,0,701,1000_AL_.jpg",
     "id": 9
+  }
+
+  public setAllAs(value: boolean) : void{
+    this.tvShows1.forEach( item => item.isSelected = value);
+    this.tvShows2.forEach( item => item.isSelected = value);
+    this.show.isSelected = value;
   }
 }
