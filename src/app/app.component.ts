@@ -84,5 +84,6 @@ export class AppComponent {
     this.tvShows1.forEach( item => item.isSelected = value);
     this.tvShows2.forEach( item => item.isSelected = value);
     this.show.isSelected = value;
+    console.log("Accion desde el App Component");
   }
 }

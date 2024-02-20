@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-controls',
@@ -8,7 +8,16 @@ import { Component } from '@angular/core';
   styleUrl: './controls.component.css'
 })
 export class ControlsComponent {
-  public setAllAs(value: boolean) : void{
-    
+  @Output()
+  public evento: EventEmitter<boolean> = new EventEmitter();
+
+  public onClickSetAll() : void{
+    console.log("Click en seleccionar todos");
+    this.evento.emit(true);
+  }
+
+  public onClickUnsetAll() : void{
+    console.log("Click en seleccionar todos");
+    this.evento.emit(false);
   }
 }
