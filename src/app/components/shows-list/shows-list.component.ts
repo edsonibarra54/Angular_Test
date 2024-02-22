@@ -13,7 +13,7 @@ import { ShowCardComponent } from '../show-card/show-card.component';
 export class ShowsListComponent {
   public objeto : any; //Esto no es nada recomendable, indica que puede tomar cualquier estructura
 
-  //Este elemento significa que podra recibirt informacion y la colocara como este elemento
+  //Este elemento significa que podra recibir informacion y la colocara como este elemento
   @Input()
   public tvShows : Show[] = []
 

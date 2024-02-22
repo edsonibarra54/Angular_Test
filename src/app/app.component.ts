@@ -44,9 +44,7 @@ export class AppComponent {
     "episodes": 179,
     "image": "https://i.kinja-img.com/gawker-media/image/upload/t_original/lseuxpzwkntjf0coatv2.jpg",
     "id": 10
-  }]
-
-  public tvShows2 : Show[] = [{
+  },{
     "title": "My Little Pony: Friendship is Magic",
     "year": 2010,
     "episodes": 235,
@@ -72,18 +70,9 @@ export class AppComponent {
     "id": 14
   }]
 
-  public show: Show = {
-    "title": "Yu-Gi-Oh!",
-    "year": 2000,
-    "episodes": 225,
-    "image": "https://m.media-amazon.com/images/M/MV5BMDM0MDA3NzYtMDE1MS00YjZmLWJmNjQtNzgxYzlhMmMyZjQ2XkEyXkFqcGdeQXVyNjk1Njg5NTA@._V1_SY1000_CR0,0,701,1000_AL_.jpg",
-    "id": 9
-  }
 
   public setAllAs(value: boolean) : void{
     this.tvShows1.forEach( item => item.isSelected = value);
-    this.tvShows2.forEach( item => item.isSelected = value);
-    this.show.isSelected = value;
     console.log("Accion desde el App Component");
   }
 }
