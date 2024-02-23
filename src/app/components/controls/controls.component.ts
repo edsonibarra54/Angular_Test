@@ -10,6 +10,8 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class ControlsComponent {
   @Output()
   public evento: EventEmitter<boolean> = new EventEmitter();
+  @Output()
+  public invertir: EventEmitter<void> = new EventEmitter();
 
   public onClickSetAll() : void{
     console.log("Click en seleccionar todos");
@@ -19,5 +21,10 @@ export class ControlsComponent {
   public onClickUnsetAll() : void{
     console.log("Click en seleccionar todos");
     this.evento.emit(false);
+  }
+
+  public onClickInvert() : void{
+    console.log("Click en invertir tarjetas");
+    this.invertir.emit();
   }
 }
