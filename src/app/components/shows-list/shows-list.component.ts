@@ -1,5 +1,5 @@
 import { NgFor, NgIf } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Show } from '../../interfaces/show.interface';
 import { ShowCardComponent } from '../show-card/show-card.component';
 
@@ -17,7 +17,11 @@ export class ShowsListComponent {
   @Input()
   public tvShows : Show[] = []
 
-  public onClick(): void {
-    //this.tvShows[0]
+  @Output() 
+  public delete: EventEmitter<number> = new EventEmitter<number>();
+  
+  onDelete(id: number): void {
+    console.log("Click en eliminar tarjeta desde show-list component");
+    this.delete.emit(id);
   }
 }

@@ -1,6 +1,6 @@
 <div class="card" [ngClass]="{'selected': tvShow.isSelected == true}" (click)="onSelect()">
     <div>
-        <div class="delete">X</div>
+        <div (click)="onDeleteClick()" class="delete">X</div>
     </div>
     <img [src]="tvShow.image" alt="">
     <div class="title">{{tvShow.title}}</div>

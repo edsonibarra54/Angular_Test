@@ -129,4 +129,9 @@ export class AppComponent {
     console.log("Se invierten tarjetas en app component");
     this.tvShows1.reverse();
   }
+
+  public deleteTvShow(id: number): void {
+    console.log("Click en eliminar tarjeta desde app component");
+    this.tvShows1 = this.tvShows1.filter(show => show.id !== id);
+  }
 }

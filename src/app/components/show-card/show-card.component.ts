@@ -1,5 +1,5 @@
 import { NgClass, NgFor, NgIf } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 import { Show } from '../../interfaces/show.interface';
 
 @Component({
@@ -19,9 +19,17 @@ export class ShowCardComponent {
     year: 0,
   };
 
+  @Output() 
+  public delete: EventEmitter<number> = new EventEmitter<number>();
+
   //public selected: boolean = false;
 
   public onSelect(): void{
     this.tvShow.isSelected = !this.tvShow.isSelected
   } 
+
+  public onDeleteClick(): void {
+    console.log("Click en eliminar tarjeta");
+    this.delete.emit(this.tvShow.id);
+  }
 }
