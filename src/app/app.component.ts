@@ -88,6 +88,6 @@ export class AppComponent {
   }
 
   public searchByTerm( value: string ){
-    this.tvShows1 = this.tvShows2.filter( item => item.title.includes(value));
+    this.tvShows1 = this.tvShows2.filter( item => item.title.toLocaleUpperCase().includes(value.toLocaleUpperCase()));
   }
 }
